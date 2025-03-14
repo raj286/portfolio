@@ -1,66 +1,52 @@
-# Personal Portfolio Website
+# Raj Machahary - Portfolio Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
+A modern, responsive portfolio website showcasing my skills, projects, and experience as a web developer.
 
 ## Features
 
-- **Responsive Design**: Looks great on all devices (desktop, tablet, mobile)
-- **Dark/Light Mode**: Toggle between dark and light themes
-- **Smooth Animations**: Scroll reveal animations and smooth transitions
-- **Project Filtering**: Filter projects by category
-- **Contact Form**: Interactive contact form
-- **Mobile-Friendly Navigation**: Hamburger menu for mobile devices
-
-## Sections
-
-1. **Home/Hero**: Introduction and call-to-action
-2. **About**: Personal information and background
-3. **Skills**: Technical skills and expertise
-4. **Projects**: Showcase of work with filtering options
-5. **Contact**: Contact form and information
-
-## Customization
-
-To personalize this portfolio:
-
-1. Replace placeholder text in `index.html` with your information
-2. Add your own images (replace the placeholder divs)
-3. Update project details with your own work
-4. Customize colors in the CSS variables (in `styles.css`)
-5. Add your social media links
-6. Update the contact information
+- Responsive design that works on all devices
+- Interactive UI with smooth animations
+- Dark/light mode toggle
+- Project filtering by category
+- Contact form
+- Animated background effects
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (with CSS variables for theming)
-- JavaScript (vanilla, no frameworks)
+- CSS3
+- JavaScript (Vanilla)
 - Font Awesome for icons
+- Google Fonts
 
-## Browser Support
+## Live Demo
 
-- Chrome
-- Firefox
-- Safari
-- Edge
-- Opera
+Visit the live website: [Raj Machahary Portfolio](https://raj286.github.io/portfolio/)
 
-## Getting Started
+## Screenshots
 
-1. Clone or download this repository
-2. Open `index.html` in your browser
-3. Customize the content to make it your own
+(Screenshots will be added soon)
+
+## Setup and Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/raj286/portfolio.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd portfolio
+   ```
+
+3. Open `index.html` in your browser to view the website locally.
+
+## Contact
+
+Feel free to reach out to me:
+- Email: kanekikunn286@gmail.com
+- GitHub: [raj286](https://github.com/raj286)
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## Credits
-
-- Font Awesome for icons
-- Google Fonts for typography
-- Unsplash for placeholder images (if used)
-
----
-
-Feel free to use this template for your personal portfolio. If you have any questions or suggestions, please feel free to reach out! 
+This project is open source and available under the [MIT License](LICENSE). 
