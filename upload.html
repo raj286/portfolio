@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Profile Picture</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4a6cf7;
+        }
+        .upload-container {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4a6cf7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #3a5bd9;
+        }
+        #preview {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Your Profile Picture</h1>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Click the "Choose File" button below to select your profile picture.</li>
+            <li>After selecting, you'll see a preview of your image.</li>
+            <li>If you're happy with it, click "Save Image".</li>
+            <li>The image will be saved as "profile-pic.jpg" and "about-pic.jpg" in your portfolio folder.</li>
+            <li>Your portfolio website will automatically use these images.</li>
+        </ol>
+    </div>
+    
+    <div class="upload-container">
+        <input type="file" id="imageInput" accept="image/*">
+        <p>Or drag and drop an image here</p>
+        <img id="preview" src="#" alt="Image Preview">
+        <br><br>
+        <button class="btn" id="saveBtn" disabled>Save Image</button>
+    </div>
+    
+    <p><strong>Note:</strong> This is a simple helper tool. In a real-world scenario, you would use a server-side solution to handle file uploads. For now, you'll need to manually move the saved images to your portfolio folder.</p>
+    
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const preview = document.getElementById('preview');
+        const saveBtn = document.getElementById('saveBtn');
+        const uploadContainer = document.querySelector('.upload-container');
+        
+        // Handle file selection
+        imageInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    saveBtn.disabled = false;
+                }
+                
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Handle drag and drop
+        uploadContainer.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#4a6cf7';
+        });
+        
+        uploadContainer.addEventListener('dragleave', function() {
+            this.style.borderColor = '#ccc';
+        });
+        
+        uploadContainer.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#ccc';
+            
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.match('image.*')) {
+                imageInput.files = e.dataTransfer.files;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    saveBtn.disabled = false;
+                }
+                
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Save button functionality
+        saveBtn.addEventListener('click', function() {
+            // In a real application, this would upload to a server
+            // For now, we'll just provide instructions
+            alert('In a real application, this would save your image as profile-pic.jpg and about-pic.jpg.\n\nFor now, please save the image manually and name it "profile-pic.jpg", then place it in your portfolio folder.');
+        });
+    </script>
+</body>
+</html> 

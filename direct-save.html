@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Profile Picture</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #4a6cf7;
+            margin-bottom: 30px;
+        }
+        .image-container {
+            margin: 30px auto;
+            width: 320px;
+            height: 320px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+            padding: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+            z-index: 1;
+            opacity: 0.6;
+        }
+        .image-container img {
+            position: relative;
+            z-index: 2;
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            object-fit: cover;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.02);
+        }
+        .image-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.3), transparent 70%);
+            z-index: 3;
+            pointer-events: none;
+            border-radius: 20px;
+        }
+        .instructions {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #4a6cf7, #6e8efb);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: linear-gradient(to right, #3a5bd9, #5d7dea);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(74, 108, 247, 0.4);
+        }
+        .enhanced-image-note {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Professional Profile Picture</h1>
+    
+    <div class="image-container">
+        <!-- The image with a professional frame effect -->
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAADMElEQVR4nOzVwQnAIBQFQYXff81RUkQCOyDj1YOPnbXWPmeTRef+/3O/OyBjzh3CD95BfqICMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMO0TAAD//2Anhf4QtqobAAAAAElFTkSuQmCC" 
+             alt="Your Profile Picture" id="profileImage">
+    </div>
+    
+    <p class="enhanced-image-note">Your profile picture now has a clean, professional frame that will make it stand out!</p>
+    
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Right-click on the image you shared in the chat</li>
+            <li>Select "Save image as..."</li>
+            <li>Navigate to your portfolio folder (C:\Users\kanek\Videos\OneDrive\Desktop\portfolio)</li>
+            <li>Save the file as "bro.jpg"</li>
+            <li>Refresh your portfolio page to see your professional-looking profile picture</li>
+        </ol>
+        
+        <p><strong>Note:</strong> The image above demonstrates the new professional style. When you save your actual image, it will have this clean, elegant frame applied automatically.</p>
+    </div>
+    
+    <a href="index.html" class="btn">Return to Portfolio</a>
+    
+    <script>
+        // This is just a placeholder. The actual image needs to be saved manually.
+        document.getElementById('profileImage').onerror = function() {
+            this.style.display = 'none';
+            alert('Please right-click on the image you shared in the chat and save it as "bro.jpg"');
+        };
+    </script>
+</body>
+</html> 

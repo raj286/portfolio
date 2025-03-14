@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Profile Picture</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #4a6cf7;
+            text-align: center;
+        }
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .profile-image {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .steps {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4a6cf7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #3a5bd9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Save Your Profile Picture</h1>
+    
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <p>To use the image you shared as your profile picture in your portfolio website, follow these steps:</p>
+    </div>
+    
+    <div class="image-container">
+        <img src="bro.png" alt="Profile Picture" class="profile-image" id="profileImage">
+        <p><em>This is a placeholder. Your actual image will appear here once saved.</em></p>
+    </div>
+    
+    <div class="steps">
+        <h3>Steps to Save Your Profile Picture:</h3>
+        <ol>
+            <li>Right-click on the image you shared in the chat</li>
+            <li>Select "Save image as..."</li>
+            <li>Navigate to your portfolio folder (C:\Users\kanek\Videos\OneDrive\Desktop\portfolio)</li>
+            <li>Save the file as "bro.png"</li>
+            <li>Refresh your portfolio page to see the updated profile picture</li>
+        </ol>
+        
+        <p><strong>Note:</strong> Make sure the image is saved in the same folder as your index.html file.</p>
+        
+        <a href="index.html" class="btn">Return to Portfolio</a>
+    </div>
+    
+    <script>
+        // Check if the image exists
+        document.getElementById('profileImage').onerror = function() {
+            this.style.display = 'none';
+            document.querySelector('.image-container p').textContent = 'Image not found. Please follow the steps below to save your profile picture.';
+        };
+    </script>
+</body>
+</html> 
